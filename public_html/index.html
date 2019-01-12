@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="MySql Partie 3">
+        <meta name="author" content="Leveque Matthieu">
+        <title>MySql Partie 3</title>
+        <!-- main core CSS -->
+        <link href="assets/css/main.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 bgMatt">
+                    <h1>MySql Partie 3</h1>
+                    <p><strong>Consigne</strong>:</p>
+                    <ul>
+                        <li>Exercice 1: Dans la base de données webDevelopment, ajouter à la table languages une colonne versions (VARCHAR).</li>
+                        <li>Exercice 2: Dans la base de données webDevelopment, ajouter à la table frameworks une colonne version (INT).</li>
+                        <li>Exercice 3: Dans la base de données webDevelopment, dans la table languages renommer la colonne versions en version.</li>
+                        <li>Exercice 4: Dans la base de données webDevelopment, dans la table frameworks, renommer la colonne name en framework.</li>
+                        <li>Exercice 5: Dans la base de données webDevelopment, dans la table frameworks changer le type de la colonne version en VARCHAR de taille 10.</li>
+                    </ul>
+                    <p>TP: Dans la base codex, dans la table clients:</p>
+                    <ul>
+                        <li>supprimer la colonne secondPhoneNumber</li>
+                        <li>renommer la colonne firstPhoneNumber en phoneNumber</li>
+                        <li>changer le type de la colonne phoneNumber en VARCHAR</li>
+                        <li>ajouter les colonnes zipCode(VARCHAR) et city(VARCHAR)</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">      
+                <div class="col-md-12 bgMatt">
+                    <h1>Résultat:</h1>
+                    <p>Exercice 1:</p>
+                    <ul>
+                        <li>mysql> ALTER TABLE languages</li>
+                        <li>-> ADD versions VARCHAR(10) NOT NULL;</li>
+                    </ul>
+                    <p>Exercice 2:</p>
+                    <ul>
+                        <li>mysql> ALTER TABLE frameworks</li>
+                        <li>-> ADD version INT(10) NOT NULL;</li>
+                    </ul>
+                    <p>Exercice 3:</p>
+                    <ul>
+                        <li>mysql> ALTER TABLE languages</li>
+                        <li>-> CHANGE versions version VARCHAR(30) NOT NULL;</li>
+                    </ul>
+                    <p>Exercice 4:</p>
+                    <ul>
+                        <li>mysql> ALTER TABLE frameworks</li>
+                        <li>-> CHANGE name frameworks VARCHAR(30) NOT NUL;</li>
+                    </ul>
+                    <p>Exercice 5:</p>
+                    <ul>
+                        <li>mysql> ALTER TABLE frameworks</li>
+                        <li>-> MODIFY version VARCHAR(10) NOT NULL;</li>
+                    </ul>
+                    <p>TP:</p>
+                    <ul>
+                        <li>USE codex;</li>
+                        <li>mysql> ALTER TABLE clients</li>
+                        <li>DROP secondPhoneNumber;</li>
+                        <li>mysql> ALTER TABLE clients</li>
+                        <li>CHANGE firstPhoneNumber phoneNumber;</li>
+                        <li>mysql> ALTER TABLE clients</li>
+                        <li>MODIFY phoneNumber VARCHAR(10) NOT NULL;</li>
+                        <li>mysql> ALTER TABLE clients</li>
+                        <li>ADD zipCode VARCHAR(5) NOT NULL, ADD city VARCHAR(30) NOT NULL;</li>
+                    </ul>
+                </div>
+            </div>
+            <footer>
+            </footer>
+    </body>
+</html>
